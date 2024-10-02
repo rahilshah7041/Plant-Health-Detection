@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Plant Health Detector</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+	<link rel="icon" href="leaf.png" type="image/x-icon">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+	
+</head>
+
+<body>
+	<nav class="navbar">
+		<div class="logoimage"><img src="{{ url_for('static', filename='images/logoimage.jpeg') }}"class="logoimage" alt="My Image">
+		</div>
+		<div class="navelements">
+		<ul>
+			<li><a href="#" class="signin">SignIn</a></li>
+			<li><a href="#">Feedback</a></li>
+			<li><a href="#">About Us</a></li>
+		</ul>
+	</div>
+		
+	</nav>
+	<div class="container"><img src="{{ url_for('static', filename='images/bgd.jpg') }}" id="right"></div>
+	<div class="heading">
+		PLANT HEALTH DETECTOR</div>
+	<div class="text">
+		<p><b>Share a picture of the plant and get immediate results!</b></p>
+	</div>
+	<div class="inner">
+		<form id="analysis-form" enctype="multipart/form-data">
+			<div class="imgbox"><img src="{{ url_for('static', filename='images/img.jpg') }}" class="img" id="selected_image">
+				<div class="middle">
+					<div class="add"><span>SELECT IMAGE</span></div>
+					<input name="image" type="file" accept="image/*" />
+				</div>
+			</div>
+			<button id="analyze-button" class="analyze-button" >
+				<span>Analyze</span>
+			</button>
+		</form>
+	</div>
+	<div id="result"  ></div>
+
+</body>
+</html>
